@@ -1,0 +1,11 @@
+{
+  "name": "androidsaf",
+  "url": "https://github.com/ChanceXML/androidsaf",
+  "license": "MIT",
+  "tags": ["android", "saf", "mods"],
+  "description": "SAF importer",
+  "version": "0.9.0",
+  "classPath": "src",
+  "releasenote": "Initial release",
+  "contributors": ["ChanceXML"]
+}
