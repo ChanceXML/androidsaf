@@ -1,5 +1,3 @@
 <project>
-    <android>
-        <source path="android/src" />
-    </android>
+    <template path="android" if="android" />
 </project>
