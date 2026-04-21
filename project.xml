@@ -1,3 +1,9 @@
 <project>
     <template path="templates/android" if="android" />
+
+<android>
+    <gradle>
+        <dependency name="androidx.documentfile:documentfile:1.0.1" />
+    </gradle>
+</android>
 </project>
