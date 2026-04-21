@@ -1,3 +1,3 @@
 <project>
-    <template path="android" if="android" />
+    <template path="templates/android" if="android" />
 </project>
