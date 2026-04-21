@@ -1,0 +1,41 @@
+name: Move Folder Tool
+
+on:
+  workflow_dispatch:
+    inputs:
+      source_folder:
+        description: "Folder to move"
+        required: true
+      destination_folder:
+        description: "Where to move it"
+        required: true
+
+jobs:
+  move:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Show inputs
+        run: |
+          echo "Source: ${{ github.event.inputs.source_folder }}"
+          echo "Destination: ${{ github.event.inputs.destination_folder }}"
+
+      - name: Create destination folder
+        run: |
+          mkdir -p "${{ github.event.inputs.destination_folder }}"
+
+      - name: Move files
+        run: |
+          mv "${{ github.event.inputs.source_folder }}"/* "${{ github.event.inputs.destination_folder }}/"
+
+      - name: Commit changes
+        run: |
+          git config user.name "github-actions"
+          git config user.email "github-actions@github.com"
+
+          git add .
+          git commit -m "Moved folder via workflow" || echo "No changes"
+          git push
