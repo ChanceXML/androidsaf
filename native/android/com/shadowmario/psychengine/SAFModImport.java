@@ -9,7 +9,7 @@ import androidx.documentfile.provider.DocumentFile;
 
 import java.io.File;
 
-public class SAFModImporter {
+public class SAFModImport {
 
     public static final int REQUEST_CODE_PICK_FOLDER = 9991;
 
