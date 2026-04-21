@@ -8,6 +8,7 @@ public class SAFBridge {
 
     public static MainActivity activity;
     public static int REQUEST_CODE = 777;
+    public static String lastTreeUri;
 
     public static void openModsFolderPicker() {
         if (activity == null) {
